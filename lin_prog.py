@@ -14,7 +14,7 @@ def lin_prog(cost_a, cost_b, profit_a, profit_b, budget, item_a='Item A', item_b
     Lp_prob += profit_a * x + profit_b * y   
     # Constraints:
     Lp_prob += cost_a * x + cost_b * y <= 500
-    Lp_prob += x + y <= int(budget/max((cost_a, cost_b)))
+    Lp_prob += x + y <= int(budget/max(cost_a, cost_b))
   
     # Display the problem
     #print(Lp_prob)
